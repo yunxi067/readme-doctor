@@ -1,0 +1,5 @@
+plans/
+test/
+.env
+coverage/
+npm-debug.log*
