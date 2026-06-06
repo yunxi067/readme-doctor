@@ -1,5 +1,9 @@
 # README Doctor
 
+[![test](https://github.com/yunxi067/readme-doctor/actions/workflows/test.yml/badge.svg)](https://github.com/yunxi067/readme-doctor/actions/workflows/test.yml)
+[![npm](https://img.shields.io/npm/v/@yunxi067/readme-doctor.svg)](https://www.npmjs.com/package/@yunxi067/readme-doctor)
+[![license](https://img.shields.io/github/license/yunxi067/readme-doctor.svg)](./LICENSE)
+
 [English](#english) | [中文](#中文)
 
 README Doctor is a small CLI that audits a GitHub repository README for the essentials that help open source visitors trust and use a project.
@@ -11,6 +15,12 @@ README Doctor 是一个轻量级命令行工具，用来检查 GitHub 仓库的 
 ## English
 
 ## Installation
+
+Run with npx:
+
+```bash
+npx @yunxi067/readme-doctor octocat/Hello-World
+```
 
 Run it directly from the repository:
 
@@ -25,7 +35,7 @@ npm install
 Audit a public GitHub repository:
 
 ```bash
-npm start -- octocat/Hello-World
+npx @yunxi067/readme-doctor octocat/Hello-World
 ```
 
 Or run the CLI file directly:
@@ -80,6 +90,10 @@ For small tools, one visual proof point helps new visitors understand the projec
 
 Issues and pull requests are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the small development workflow.
 
+## Release Notes
+
+See [CHANGELOG.md](./CHANGELOG.md).
+
 ## License
 
 MIT
@@ -87,6 +101,12 @@ MIT
 ## 中文
 
 ## 安装
+
+使用 npx 直接运行：
+
+```bash
+npx @yunxi067/readme-doctor octocat/Hello-World
+```
 
 从 GitHub 克隆项目并安装依赖：
 
@@ -101,7 +121,7 @@ npm install
 检查一个公开 GitHub 仓库：
 
 ```bash
-npm start -- octocat/Hello-World
+npx @yunxi067/readme-doctor octocat/Hello-World
 ```
 
 也可以直接运行 CLI 文件：
@@ -155,6 +175,10 @@ GITHUB_TOKEN=ghp_your_token_here node src/cli.js owner/repo
 ## 参与贡献
 
 欢迎提交 issue 或 pull request。开发流程可以查看 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
+## 版本记录
+
+查看 [CHANGELOG.md](./CHANGELOG.md)。
 
 ## 许可证
 
