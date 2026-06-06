@@ -1,11 +1,14 @@
 {
-  "name": "readme-doctor",
+  "name": "@yunxi067/readme-doctor",
   "version": "0.1.0",
   "description": "A CLI that audits GitHub README files for open source essentials.",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunxi067/readme-doctor.git"
+    "url": "git+https://github.com/yunxi067/readme-doctor.git"
   },
   "homepage": "https://github.com/yunxi067/readme-doctor#readme",
   "bugs": {
@@ -14,12 +17,16 @@
   "files": [
     "src",
     "docs/demo.svg",
+    "docs/release-notes-v0.1.0.md",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE",
-    "CONTRIBUTING.md"
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md"
   ],
   "bin": {
-    "readme-doctor": "./src/cli.js"
+    "readme-doctor": "src/cli.js"
   },
   "scripts": {
     "test": "node --test",
@@ -30,7 +37,9 @@
     "github",
     "cli",
     "audit",
-    "open-source"
+    "open-source",
+    "documentation",
+    "readme-checker"
   ],
   "author": "yunxi067",
   "license": "MIT",
