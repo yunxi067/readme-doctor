@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { auditReadme, parseGitHubRepo } from '../src/audit.js';
+import { auditReadme, formatMarkdownReport, parseGitHubRepo } from '../src/audit.js';
 
 test('parseGitHubRepo accepts common GitHub repository inputs', () => {
   assert.deepEqual(parseGitHubRepo('https://github.com/octocat/Hello-World'), {
@@ -81,4 +81,50 @@ test('auditReadme gives partial credit for a usage command even without a usage 
 
   assert.equal(usage.passed, true);
   assert.equal(usage.evidence.includes('inline command'), true);
+});
+
+test('auditReadme accepts common Chinese README headings', () => {
+  const result = auditReadme(`
+# 小工具
+
+## 安装
+npm install tiny-tool
+
+## 使用
+\`\`\`bash
+tiny-tool ./README.md
+\`\`\`
+
+## 演示
+![演示](./demo.svg)
+
+## 参与贡献
+欢迎提交 issue。
+
+## 常见问题
+Q: 支持中文吗？
+A: 支持。
+
+## 许可证
+MIT
+`, {
+    license: { present: false },
+    repo: { hasIssues: true }
+  });
+
+  assert.equal(result.score, 100);
+  assert.equal(result.items.every((item) => item.passed), true);
+});
+
+test('formatMarkdownReport renders a portable markdown audit report', () => {
+  const audit = auditReadme('# Tool\n\nRun `node cli.js owner/repo` to check a repo.', {
+    license: { present: false },
+    repo: { hasIssues: false }
+  });
+  const markdown = formatMarkdownReport('README.md', audit);
+
+  assert.match(markdown, /^# README Doctor Report/m);
+  assert.match(markdown, /\*\*Target:\*\* `README\.md`/);
+  assert.match(markdown, /\| Usage example \| Pass \|/);
+  assert.match(markdown, /\| License \| Missing \|/);
 });

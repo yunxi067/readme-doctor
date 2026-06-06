@@ -38,6 +38,12 @@ Audit a public GitHub repository:
 npx @yunxi067/readme-doctor octocat/Hello-World
 ```
 
+Audit a local README file from source:
+
+```bash
+node src/cli.js ./README.md
+```
+
 Or run the CLI file directly:
 
 ```bash
@@ -48,6 +54,12 @@ Print JSON for scripts:
 
 ```bash
 node src/cli.js octocat/Hello-World --json
+```
+
+Print a Markdown report from source:
+
+```bash
+node src/cli.js ./README.md --format markdown
 ```
 
 ## What It Checks
@@ -62,7 +74,7 @@ README Doctor scores seven beginner-friendly README essentials:
 - contributing guidance
 - FAQ
 
-Each item has equal weight. The CLI prints the score, passed checks, and focused suggestions for missing sections.
+Each item has equal weight. The CLI prints the score, passed checks, and focused suggestions for missing sections. English and common Chinese section headings are both recognized.
 
 ## GitHub API
 
@@ -124,6 +136,12 @@ npm install
 npx @yunxi067/readme-doctor octocat/Hello-World
 ```
 
+从源码检查本地 README 文件：
+
+```bash
+node src/cli.js ./README.md
+```
+
 也可以直接运行 CLI 文件：
 
 ```bash
@@ -134,6 +152,12 @@ node src/cli.js https://github.com/octocat/Hello-World
 
 ```bash
 node src/cli.js octocat/Hello-World --json
+```
+
+从源码输出 Markdown 报告：
+
+```bash
+node src/cli.js ./README.md --format markdown
 ```
 
 ## 检查内容
@@ -148,7 +172,7 @@ README Doctor 会检查 7 个对开源新访客很重要的 README 要素：
 - 贡献方式
 - 常见问题 FAQ
 
-每一项权重相同。CLI 会输出总分、已通过项目，以及缺失项目的改进建议。
+每一项权重相同。CLI 会输出总分、已通过项目，以及缺失项目的改进建议。英文和常见中文小节标题都会被识别。
 
 ## GitHub API 说明
 
