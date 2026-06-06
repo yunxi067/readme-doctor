@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">README Doctor CLI demo</title>
+  <desc id="desc">Terminal-style demo of README Doctor auditing a GitHub repository.</desc>
+  <rect width="960" height="520" fill="#101820"/>
+  <rect x="32" y="32" width="896" height="456" rx="8" fill="#17212b"/>
+  <circle cx="64" cy="60" r="7" fill="#ff5f56"/>
+  <circle cx="88" cy="60" r="7" fill="#ffbd2e"/>
+  <circle cx="112" cy="60" r="7" fill="#27c93f"/>
+  <text x="56" y="112" fill="#d6e2ef" font-family="Consolas, Monaco, monospace" font-size="24">$ readme-doctor owner/repo</text>
+  <text x="56" y="166" fill="#8fd694" font-family="Consolas, Monaco, monospace" font-size="22">README Doctor report for owner/repo</text>
+  <text x="56" y="208" fill="#ffd166" font-family="Consolas, Monaco, monospace" font-size="22">Score: 86/100 - Good</text>
+  <text x="56" y="266" fill="#d6e2ef" font-family="Consolas, Monaco, monospace" font-size="21">[x] Project title</text>
+  <text x="56" y="306" fill="#d6e2ef" font-family="Consolas, Monaco, monospace" font-size="21">[x] Installation</text>
+  <text x="56" y="346" fill="#d6e2ef" font-family="Consolas, Monaco, monospace" font-size="21">[x] Usage example</text>
+  <text x="56" y="386" fill="#ff7b72" font-family="Consolas, Monaco, monospace" font-size="21">[ ] FAQ</text>
+  <text x="88" y="426" fill="#9fb3c8" font-family="Consolas, Monaco, monospace" font-size="19">Add a short FAQ that answers expected beginner questions.</text>
+</svg>
+
